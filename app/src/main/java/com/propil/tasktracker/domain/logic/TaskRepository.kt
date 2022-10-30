@@ -1,11 +1,12 @@
 package com.propil.tasktracker.domain.logic
 
 import com.propil.tasktracker.domain.entity.Task
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 interface TaskRepository {
 
-    fun addTask(task: Task)
+    suspend fun addTask(task: Task)
 
     fun finishTask(task: Task)
 
@@ -13,7 +14,7 @@ interface TaskRepository {
 
     fun editTask(task: Task)
 
-    fun getTaskList(): List<Task>
+    suspend fun getTaskList(): Flow<List<Task>>
 
     fun getTask(taskId: Int): Task
 

@@ -5,5 +5,5 @@ import javax.inject.Inject
 
 class GetTaskListUseCase @Inject constructor(val repository: TaskRepository) {
 
-    operator fun invoke() = repository.getTaskList()
+    suspend operator fun invoke() = repository.getTaskList()
 }
