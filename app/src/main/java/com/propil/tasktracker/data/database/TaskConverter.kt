@@ -9,7 +9,7 @@ class TaskConverter {
     fun mapDateToLong(date: Date): Long {
         return date.time
     }
-
+    @TypeConverter
     fun mapLongToDate(value: Long): Date {
         return value.let { Date(it) }
     }

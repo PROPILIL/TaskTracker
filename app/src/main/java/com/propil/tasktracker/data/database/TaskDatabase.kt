@@ -8,8 +8,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.propil.tasktracker.data.model.TaskDbModel
 
-@Database(entities = [TaskDbModel::class], version = 1,
-autoMigrations = [AutoMigration(from = 1, to = 2)], exportSchema = true)
+@Database(entities = [TaskDbModel::class], version = 1, exportSchema = false)
 @TypeConverters(TaskConverter::class)
 abstract class TaskDatabase: RoomDatabase() {
 

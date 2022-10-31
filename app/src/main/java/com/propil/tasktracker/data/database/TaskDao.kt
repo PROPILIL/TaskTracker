@@ -15,7 +15,7 @@ interface TaskDao {
     suspend fun addTask(taskDbModel: TaskDbModel)
 
     @Query("SELECT * FROM tasks")
-    suspend fun getUnfinishedTaskList(): Flow<List<TaskDbModel>>
+    fun getUnfinishedTaskList(): Flow<List<TaskDbModel>>
 //
 //    @Query("SELECT * FROM tasks")
 //    suspend fun getFinishedTaskList(): Flow<List<TaskDbModel>>
